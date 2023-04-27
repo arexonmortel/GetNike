@@ -343,7 +343,7 @@ section.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  
 }
 .category-title{
     color: rgba(30, 30, 30, 1);
