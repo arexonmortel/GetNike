@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Summary</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700;800;900&display=swap');
+
+
+    :root {
+        --primary-color:  #C1DCDC;
+        --title-color: #1E1E1E;
+        --nav-title-color: rgba(30, 30, 30, 0.5);
+        --hover: #a2dada;
+        --card-background:#c1dcdc9b;
+        --secondary-card-background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        
+        
+    
+      }
+    body {
+      font-family: 'Poppins' 'Courier New', Courier, monospace;
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    a {
+      font-size: 20px;
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    a:hover {
+      background-color: #3e8e41;
+    }
+    #order-summary-container{
+
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #c1dcdc9b;;
+      padding: 2rem;
+      border-radius: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div id="order-summary-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Retrieve the order summary HTML from local storage
+      const orderSummaryHTML = localStorage.getItem('orderSummaryHTML');
+      if (orderSummaryHTML) {
+        // Display the order summary in the DOM
+        const orderSummaryContainer = document.getElementById('order-summary-container');
+        orderSummaryContainer.innerHTML = orderSummaryHTML;
+        // Clear the order summary HTML from local storage
+        localStorage.removeItem('orderSummaryHTML');
+      } else {
+        // Handle the case when order summary HTML is not available
+        console.error('Order summary HTML not found.');
+      }
+    });
+  </script>
+</body>
+</html>

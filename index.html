@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./GetNike-img-src/nike.png">
     <title>GetNike Store</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,9 +19,17 @@
         <a class="nav-pages" id="product-page" href="#all-product-section">Products</a>
         <a class="nav-pages" href="#contact-section">Contact</a>
         </ul>
-        <div class="cart">
+        <div class="cart" id="order-cart-btn">
             <a href="#"><img src="./src-icon/cart.svg" alt="cart"> </a>
             <div class="order-count"></div>
+        </div>
+        <div id="order-popup" class="order-popup">
+          <div class="order-popup-content">
+            <span class="order-close-btn">&times;</span>
+            <div id="order-cart-items"></div>
+            <div id="order-total-price"></div>
+            <button id="order-checkout-btn">Checkout</button>
+          </div>
         </div>
     </nav> 
 </header>
@@ -226,7 +235,7 @@
           <div class="product">
             <img src="./GetNike-img-src/lebron-xx-little-kids-shoes.png" alt="Kid's Shoes">
             <h3>Kid's Lebron XX</h3>
-            <p class="price">&#x20B1; 5,90.99</p>
+            <p class="price">&#x20B1; 5,090.99</p>
             <button>Add to Cart</button>
           </div>
           <div class="product">
